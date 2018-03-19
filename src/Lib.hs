@@ -44,7 +44,7 @@ getFortunePrediction = do
         "A healthy body will benefit you for life. Healthy body-movin' as well!",
         "Avoid negative shit.",
         "Fame and fortune lie ahead. Of me. Don't know about you!",
-        "You think it’s a secret, but they know. THEY KNOW.",
+        "You think it's a secret, but they know. THEY KNOW.",
         "Pursue your dreams with vigor. And vinegar!"
         ]
     return x
