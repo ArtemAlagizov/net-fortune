@@ -2,7 +2,13 @@
 [![Build Status](https://travis-ci.org/ArtemAlagizov/net-fortune.svg?branch=master)](https://travis-ci.org/ArtemAlagizov/net-fortune)
 
 
-A learning project to develop a networked "fortune" clone in Haskell.
+A learning project to develop a networked "fortune" clone in Haskell. The service returns a fortune prediction when a GET request is sent to it.
+
+Docker image with the app has been hosted on the AWS ECR; at the moment can be accessed by the link below: 
+
+http://ec2-34-227-228-18.compute-1.amazonaws.com:8080/fortune 
+
+___
 
 Github repository of the app: 
 ````
