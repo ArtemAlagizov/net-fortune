@@ -4,7 +4,7 @@
 
 A learning project to develop a networked "fortune" clone in Haskell. The service returns a fortune prediction when a GET request is sent to it.
 
-Docker image with the app has been hosted on the AWS ECR; at the moment can be accessed by the link below: 
+Docker image with the app has been hosted on the AWS ECR; at the moment it can be accessed by the link below: 
 
 http://ec2-34-227-228-18.compute-1.amazonaws.com:8080/fortune 
 
@@ -48,4 +48,4 @@ $ docker run -i -t -p 8080:8080 alagiz/net-fortune /bin/bash
     ```
     $ stack exec netFortune-exe
     ```
-* Visit http://localhost:8080/fortune
+* Visit http://localhost:8080/fortune or http://127.0.0.1:8080/fortune
