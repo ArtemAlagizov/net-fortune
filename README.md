@@ -19,7 +19,7 @@ Docker container with the app:
 https://hub.docker.com/r/alagiz/net-fortune/
 ````
 
-Docker autobuild is activated for the docker image - any commit to the master branch triggers rebuild for the docker image.
+Docker autobuild is activated on the docker hub - any commit to the master branch triggers rebuild of the docker image.
 
 # Usage with docker
 * Run
