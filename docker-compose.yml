@@ -2,10 +2,10 @@ version: '2.1'
 
 services:
   fortune:
+    container_name: fortune
     build:
       context: .
       dockerfile: ./docker/net-fortune/Dockerfile
-    container_name: fortune
     restart: always
     ports:
       - "8080:8080"
@@ -15,17 +15,14 @@ services:
       db:
         condition: service_healthy
   db:
+    container_name: fortune-db
     build:
       context: ./docker/net-fortune-db/
-    healthcheck:
-      test: exit 0
-      interval: 30s
-      timeout: 30s
-      retries: 30
     restart: always
     ports:
       - "5432:5432"
-    container_name: fortune-db
+    healthcheck:
+          test: exit 0
     environment:
       POSTGRES_DB: fortunedb
       POSTGRES_USER: mister
