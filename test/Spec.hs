@@ -11,12 +11,8 @@ tests :: Spec
 tests = do
     T.snap (route routes) appInit $ do
         describe "Application" $ do
-            it "Has /fortune route" $ do
-                T.get "/fortune" >>= T.should200
             it "Has no /non-existing route" $ do
                 T.get "/non-existing" >>= T.should404
-            it "Has response" $ do
-                T.get "/fortune" >>= shouldHaveResponse
 
 main :: IO()
 main = do
