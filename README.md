@@ -17,7 +17,7 @@ https://github.com/ArtemAlagizov/net-fortune/
 # Design
 * There are two containers - one with Haskell app, one with Postgres db
 * These two containers are on the same local network (by docker-compose), so they can see and communicate with each other
-* Haskell receives "fortune" upon a GET request and displays it in a browser
+* When Haskell app receives a GET request from a client, it queries the db for a random fortune and when db provides the response - returns it to the client
 
 # Usage 
 * Run
