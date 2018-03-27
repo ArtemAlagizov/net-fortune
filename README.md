@@ -14,38 +14,23 @@ Github repository of the app:
 ````
 https://github.com/ArtemAlagizov/net-fortune/
 ````
-Docker container with the app: 
-````
-https://hub.docker.com/r/alagiz/net-fortune/
-````
+# Design
+* There are two containers - one with Haskell app, one with Postgres db
+* These two containers are on the same local network (by docker-compose), so they can see and communicate with each other
+* Haskell receives "fortune" upon a GET request and displays it in a browser
 
-Docker autobuild is activated on the docker hub - any commit to the master branch triggers rebuild of the docker image.
-
-# Usage with docker
+# Usage 
 * Run
 ```
-$ docker pull alagiz/net-fortune
+$ docker-compose up 
 ```
+or to run containers in the background
 ```
-$ docker run -i -t -p 8080:8080 alagiz/net-fortune /bin/bash
+$ docker-compose up -d
 ```
+
 * Visit http://localhost:8080/fortune or http://host-ip:8080/fortune (default is http://192.168.99.100:8080/fortune)
   * To get docker host ip run
     ```
     $ docker-machine env
     ```  
-
-# Usage without docker
-
-* Have stack installed
-    ```
-    https://docs.haskellstack.org/en/stable/README/
-    ```
-* Run 
-    ```
-    $ stack build
-    ```
-    ```
-    $ stack exec netFortune-exe
-    ```
-* Visit http://localhost:8080/fortune or http://127.0.0.1:8080/fortune

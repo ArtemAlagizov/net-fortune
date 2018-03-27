@@ -1,0 +1,34 @@
+version: '2.1'
+
+services:
+  fortune:
+    build:
+      context: .
+      dockerfile: ./docker/net-fortune/Dockerfile
+    container_name: fortune
+    restart: always
+    ports:
+      - "8080:8080"
+    links:
+      - db
+    depends_on:
+      db:
+        condition: service_healthy
+  db:
+    build:
+      context: ./docker/net-fortune-db/
+    healthcheck:
+      test: exit 0
+      interval: 30s
+      timeout: 30s
+      retries: 30
+    restart: always
+    ports:
+      - "5432:5432"
+    container_name: fortune-db
+    environment:
+      POSTGRES_DB: fortunedb
+      POSTGRES_USER: mister
+      POSTGRES_PASSWORD: 'default_password'
+
+

@@ -1,12 +1,10 @@
-FROM haskell:8
+FROM alagiz/haskell-web-base
 
 COPY . /opt/net-fortune
 
 WORKDIR /opt/net-fortune
 
-RUN apt-get update && apt-get install xz-utils make
-RUN stack upgrade
-RUN stack build --test
+RUN stack build
 
 EXPOSE 8080
 ENTRYPOINT ["stack", "exec", "netFortune-exe"]

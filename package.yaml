@@ -29,6 +29,8 @@ dependencies:
 - hspec-snap
 - hspec-core
 - snap-core
+- postgresql-simple
+- resource-pool
 
 library:
   source-dirs: src
