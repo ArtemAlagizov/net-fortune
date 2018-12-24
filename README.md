@@ -6,7 +6,7 @@ A learning project to develop a networked "fortune" clone in Haskell. The servic
 
 Docker image with the app has been hosted on the AWS ECR; at the moment it can be accessed by the link below: 
 
-http://ec2-34-227-228-18.compute-1.amazonaws.com:8080/fortune 
+not available at the moment -> http://ec2-34-227-228-18.compute-1.amazonaws.com:8080/fortune <- not available at the moment
 
 ___
 
